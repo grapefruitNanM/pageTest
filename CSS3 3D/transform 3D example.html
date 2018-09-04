@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>transform 3D test</title>
+	<meta charset="utf-8">
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
+</head>
+<body>
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		.main{
+			width: 100%;
+			height: 100%;
+			background-color: #ccc;
+			text-align: center;
+			position: absolute;
+		}
+		.stage{
+			width: 900px;
+			min-height: 100px;
+			margin-left: auto;
+			margin-right: auto;
+			padding: 100px 50px;
+			background-color: #f0f0f0;
+			box-shadow: inset 0 0 3px rgba(0,0,0,.35);
+			 -webkit-perspective: 800px;
+			   -moz-perspective: 800px;
+		            perspective: 800px;
+			-webkit-transition: top .5s;
+			position: relative;
+			top: 50%;
+			perspective-origin: 50% 30%;
+			transform: translate(0,-50%);
+		}
+		.pic{
+			width: 128px;
+			height: 80px;
+			box-shadow: 0 1px 3px rgba(0,0,0,.5);
+			-webkit-transition: opacity 1s, -webkit-transform 1s;
+		       -moz-transition: opacity 1s, -moz-transform 1s;
+		            transition: opacity 1s, transform 1s;
+			position: absolute;
+			bottom: 0;
+		}
+		.pic:nth-child(1) { transform: rotateY(   0deg ) translateZ(200px);}
+		.pic:nth-child(2) { transform: rotateY(  40deg ) translateZ(200px);}
+		.pic:nth-child(3) { transform: rotateY(  80deg ) translateZ(200px);}
+		.pic:nth-child(4) { transform: rotateY( 120deg ) translateZ(200px);}
+		.pic:nth-child(5) { transform: rotateY( 160deg ) translateZ(200px);}
+		.pic:nth-child(6) { transform: rotateY( 200deg ) translateZ(200px);}
+		.pic:nth-child(7) { transform: rotateY( 240deg ) translateZ(200px);}
+		.pic:nth-child(8) { transform: rotateY( 280deg ) translateZ(200px);}
+		.pic:nth-child(9) { transform: rotateY( 320deg ) translateZ(200px);}
+		.container{
+			width: 128px;
+			height: 100px;
+			margin-left: -64px;
+			-webkit-transition: -webkit-transform 1s;
+			   -moz-transition: -moz-transform 1s;
+			        transition: transform 1s;
+			-webkit-transform-style: preserve-3d;
+			  -moz-transform-style: preserve-3d;
+			       transform-style: preserve-3d;
+			position: absolute;
+			left: 50%;
+		}
+		.orange{
+			background-color: orange;
+		}
+		.red{
+			background-color: red;
+		}
+		.green{
+			background-color: green;
+		}
+		.white{
+			background-color: white;
+		}
+		.black{
+			background-color: black;
+		}
+		.blue{
+			background-color: blue;
+		}
+	</style>
+	<div class="main">
+		<div class="stage">
+			<div class="container">
+				<div class="pic orange">1</div>
+				<div class="pic red">2</div>
+				<div class="pic green">3</div>
+				<div class="pic white">4</div>
+				<div class="pic black">5</div>
+				<div class="pic blue">6</div>
+				<div class="pic orange">7</div>
+				<div class="pic white">8</div>
+				<div class="pic green">9</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var x=1;
+		$(".container").on('click',function(){
+			var y=40*x;
+			var container=$(".container");
+			container.css("transform","rotateY("+(-1*y)+"deg)");
+			x++;
+		});
+	</script>
+
+</body>
+</html>

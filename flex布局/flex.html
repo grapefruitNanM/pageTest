@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>flex布局</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<span>Container</span>
+	<div class="container">
+		<div class="item item1"><span>item1</span></div>
+		<div class="item item2"><span>item2</span></div>
+		<div class="item item3"><span>item3</span></div>
+	</div>
+	<style type="text/css">
+		body{
+			text-align: center;
+		}
+		span{
+			position: absolute;
+			top: 20%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+		.container span{
+			position:relative;
+			top: 40%;
+			left: 0%;
+		}
+		.container{
+			width: 500px;
+			height: 400px;
+			display: flex;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			background-color: #20B2AA;
+	        flex-direction: row;
+	        flex-wrap: wrap;
+	        justify-content: flex-start;
+	        align-items: stretch;
+	        align-content: stretch;
+		}
+		.item{
+			width: 200px;
+			height: 160px;
+			background-color: #F4A460;
+			border: solid 1px black;
+	        order: ;
+	        flex-grow: ;
+	        flex-shrink: ;
+	        flex-basis: ;
+	        align-self: ;
+		}
+	</style>
+</body>
+</html>

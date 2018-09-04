@@ -1,0 +1,32 @@
+html{
+	font-size: 62.5%;
+}
+body{
+	margin: 0;
+	padding: 0;
+}
+.container{
+	position: relative;
+	top: 10rem;
+	left: 30%;
+	width: 20rem;
+	height: 20rem;
+}
+.container .back{
+	background-color: purple;
+	color: white;
+	text-align: center;
+	width: 100%;
+	vertical-align: middle;
+	height: 100%;
+	font-size: 1.4rem;
+	font-family: "微软雅黑";
+}
+.container .back span{
+	text-align: center;
+	display: inline-block;
+	width: 100%;
+	line-height: 20rem;
+}
+
+@

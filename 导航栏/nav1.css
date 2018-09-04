@@ -1,0 +1,96 @@
+html{
+	font-size: 62.5%;
+}
+body{
+	margin: 0;
+}
+nav#nav{
+	height: 8rem;
+	width: 100%;
+	background-color: #6A5ACD;
+	font-size: 1.6rem;
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: space-around;
+	position: fixed;
+}
+nav#nav li{
+	list-style: none;
+	text-align: center;
+}
+nav#nav a{
+	text-decoration: none;
+	color: gold;
+}
+#nav.nav ul#mainItem{
+	display: flex;
+	width: 60%;
+	justify-content: space-around;
+	flex-direction: row;
+}
+#nav.nav ul#mainItem li.item{
+	text-align: left;
+	height: 3rem;
+}
+#nav.nav ul#mainItem li.item div{
+	font-size: 1.7rem;
+	font-weight: 600;
+}
+#nav.nav ul#mainItem li.item ul.sublist{
+	background-color: white;
+	width: 100%;
+	position: relative;
+	left: -50%;
+	visibility: hidden;
+}
+#nav.nav ul#mainItem li.item:hover{
+	color: #FFDEAD;
+	font-size: 1.8rem;
+}
+#nav.nav ul#mainItem li.item:hover ul.sublist{
+	visibility: visible;
+	font-size: 1.6rem;
+	color: black;
+	border-radius: 0.5rem;
+	box-shadow: 0.1rem 0.1rem 0.2rem #AAA;
+}
+#nav.nav ul#mainItem .item .sublist li.subItem{
+	text-align: center;
+	position: relative;
+	right: 28%;
+	word-wrap: break-word;
+	height: 3rem;
+}
+#nav.nav ul#mainItem .item .sublist li.subItem:hover{
+	border-bottom: solid 0.2rem orange;
+}
+nav#nav .sign-in-up,nav#nav .discuss,nav#nav .searchbar{
+	flex-shrink: 0;
+}
+nav#nav .searchbar i,nav#nav .searchbar input{
+	display: inline-block;
+	font-size: 1.6rem;
+	vertical-align: middle;
+}
+nav#nav .searchbar{
+	width: 22rem;
+}
+nav#nav .searchbar input{
+	width: 18rem;
+	border-radius: 0.5rem 0 0 0.5rem;
+	height: 2rem;
+	border: none;
+	margin: 0;
+	padding-left: 0.5rem;
+}
+nav#nav .searchbar i{
+	border-radius: 0 0.5rem 0.5rem 0;
+	background-color: white;
+	height: 2.2rem;
+	margin: 0;
+	width: 2rem;
+	border: none;
+	position: relative;
+	right: 0.5rem;
+}

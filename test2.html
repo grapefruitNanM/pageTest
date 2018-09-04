@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>表格表单测试</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<ol type="A">
+		<li>apple</li>
+		<li>tomato</li>
+	</ol>
+	<ol start="12">
+		<li>apple</li>
+		<li>tomato</li>
+	</ol>
+<!-- 只有有序表格是数字标识的时候start才有用，且type如果是B也不起作用，会默认为数字标识 -->
+	<ul style="list-style-type: square;">
+		<li>apple</li>
+		<li>tomato</li>
+	</ul>
+
+	<form method="post">
+		<input type="text" name="username" placeholder="username">
+		<input type="password" name="ppassword" placeholder="password">
+		<textarea rows="10" cols="30" style="resize: none;"></textarea>
+		<input type="submit" value="提交">
+		<input type="reset" name="重置">
+	</form>
+
+	<form method="post">
+		<fieldset>
+			<legend>biankuangzi</legend>
+			<input type="text" name="username" placeholder="username">
+			<input type="password" name="ppassword" placeholder="password">
+		</fieldset>
+	</form>
+	<hr style="width: 100px">
+	<blockquote>
+		zhehsi
+	</blockquote>
+</body>
+</html>
